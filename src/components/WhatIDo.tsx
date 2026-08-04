@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import "./styles/WhatIDo.css";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const WhatIDo = () => {
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -8,14 +7,11 @@ const WhatIDo = () => {
     containerRef.current[index] = el;
   };
   useEffect(() => {
-    if (ScrollTrigger.isTouch) {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.classList.remove("what-noTouch");
-          container.addEventListener("click", () => handleClick(container));
-        }
-      });
-    }
+    containerRef.current.forEach((container) => {
+      if (container) {
+        container.addEventListener("click", () => handleClick(container));
+      }
+    });
     return () => {
       containerRef.current.forEach((container) => {
         if (container) {
@@ -90,21 +86,26 @@ const WhatIDo = () => {
               <h3>DEVELOP</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                I build responsive, high-performance web applications that
+                combine clean code with intuitive user experiences. My work
+                focuses on developing modern frontend interfaces that are
+                visually appealing, scalable, and optimized for performance
+                across desktop and mobile devices.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">HTML</div>
+                <div className="what-tags">CSS</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
-                <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
+                <div className="what-tags">Responsive UI</div>
+                <div className="what-tags">Glassmorphism</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">Firebase</div>
+                <div className="what-tags">MongoDB</div>
+                <div className="what-tags">Python</div>
+                <div className="what-tags">REST APIs</div>
+                <div className="what-tags">Version Control</div>
+                <div className="what-tags">Performance Optimization</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,22 +129,26 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>DESIGN</h3>
+              <h3>AI & WORKFLOWS</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                Beyond coding, I'm passionate about exploring AI-assisted
+                development and prompt engineering to build smarter workflows
+                and accelerate product development. I continuously learn,
+                experiment, and refine my skills to stay aligned with the
+                latest trends in frontend engineering and modern web
+                technologies.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">Prompt Engineering</div>
+                <div className="what-tags">Generative AI</div>
+                <div className="what-tags">AI-Assisted Workflows</div>
+                <div className="what-tags">Antigravity</div>
+                <div className="what-tags">VS Code</div>
+                <div className="what-tags">GitHub</div>
+                <div className="what-tags">Canva</div>
+                <div className="what-tags">Google Stitch</div>
               </div>
               <div className="what-arrow"></div>
             </div>
